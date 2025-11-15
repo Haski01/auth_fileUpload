@@ -4,6 +4,7 @@ const Dashboard = () => {
   const { user } = useAuth();
 
   if (!user) return <p>Loading...</p>;
+  // console.log("Profile picture url(user.avater.url)", user.avatar.url);
 
   return (
     <div style={{ padding: "2rem" }}>
@@ -17,7 +18,7 @@ const Dashboard = () => {
         }}
       >
         <img
-          src={user.profilePic}
+          src={user.avatar.url}
           alt="Profile"
           width="120"
           height="120"
